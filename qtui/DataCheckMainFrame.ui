@@ -1,0 +1,328 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>DataCheckMainFrame</class>
+ <widget class="QWidget" name="DataCheckMainFrame">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>550</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>矢量数据检查工具</string>
+  </property>
+  <widget class="QLabel" name="labelCurrFile">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>10</y>
+     <width>101</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>9</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string> 当前数据库文件：</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pbtn_opendir">
+   <property name="geometry">
+    <rect>
+     <x>320</x>
+     <y>9</y>
+     <width>91</width>
+     <height>26</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>打开文件夹</string>
+   </property>
+  </widget>
+  <widget class="QComboBox" name="cmb_dbselector">
+   <property name="geometry">
+    <rect>
+     <x>110</x>
+     <y>10</y>
+     <width>171</width>
+     <height>22</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pbtn_opengdb">
+   <property name="geometry">
+    <rect>
+     <x>430</x>
+     <y>10</y>
+     <width>91</width>
+     <height>26</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>打开GDB</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pbtn_openmdb">
+   <property name="geometry">
+    <rect>
+     <x>540</x>
+     <y>10</y>
+     <width>91</width>
+     <height>26</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>打开MDB</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pbtn_openrulefile">
+   <property name="geometry">
+    <rect>
+     <x>650</x>
+     <y>10</y>
+     <width>91</width>
+     <height>26</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>打开检查规则</string>
+   </property>
+  </widget>
+  <widget class="QGroupBox" name="gb_checkbox">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>40</y>
+     <width>781</width>
+     <height>81</height>
+    </rect>
+   </property>
+   <property name="title">
+    <string>检查项</string>
+   </property>
+   <widget class="QCheckBox" name="ckb_lyrname">
+    <property name="geometry">
+     <rect>
+      <x>30</x>
+      <y>20</y>
+      <width>71</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>数据层名</string>
+    </property>
+   </widget>
+   <widget class="QCheckBox" name="ckb_lyrname_a">
+    <property name="geometry">
+     <rect>
+      <x>120</x>
+      <y>20</y>
+      <width>81</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>数据层别名</string>
+    </property>
+   </widget>
+   <widget class="QCheckBox" name="ckb_fc_code">
+    <property name="geometry">
+     <rect>
+      <x>210</x>
+      <y>20</y>
+      <width>81</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>要素代码</string>
+    </property>
+   </widget>
+   <widget class="QCheckBox" name="ckb_fcattr">
+    <property name="geometry">
+     <rect>
+      <x>290</x>
+      <y>20</y>
+      <width>81</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>要素属性项</string>
+    </property>
+   </widget>
+   <widget class="QCheckBox" name="ckb_nullfield">
+    <property name="geometry">
+     <rect>
+      <x>380</x>
+      <y>20</y>
+      <width>81</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>空值字段</string>
+    </property>
+   </widget>
+   <widget class="QCheckBox" name="ckb_attrrange">
+    <property name="geometry">
+     <rect>
+      <x>30</x>
+      <y>50</y>
+      <width>81</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>属性值范围</string>
+    </property>
+   </widget>
+   <widget class="QCheckBox" name="ckb_pointoverlay">
+    <property name="geometry">
+     <rect>
+      <x>210</x>
+      <y>50</y>
+      <width>81</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>点重合</string>
+    </property>
+   </widget>
+   <widget class="QCheckBox" name="ckb_lineoverlay">
+    <property name="geometry">
+     <rect>
+      <x>290</x>
+      <y>50</y>
+      <width>81</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>线重合</string>
+    </property>
+   </widget>
+   <widget class="QCheckBox" name="ckb_polygonoverlay">
+    <property name="geometry">
+     <rect>
+      <x>380</x>
+      <y>50</y>
+      <width>81</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>面重合</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label">
+    <property name="geometry">
+     <rect>
+      <x>160</x>
+      <y>50</y>
+      <width>16</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>10</pointsize>
+      <weight>50</weight>
+      <bold>false</bold>
+     </font>
+    </property>
+    <property name="text">
+     <string>|</string>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QPushButton" name="pbtn_docheck">
+   <property name="geometry">
+    <rect>
+     <x>140</x>
+     <y>125</y>
+     <width>111</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="autoFillBackground">
+    <bool>false</bool>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font: 75 14pt &quot;Agency FB&quot;;</string>
+   </property>
+   <property name="text">
+    <string>开始检查</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pbtn_help">
+   <property name="geometry">
+    <rect>
+     <x>770</x>
+     <y>10</y>
+     <width>21</width>
+     <height>23</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>H?</string>
+   </property>
+  </widget>
+  <widget class="QTextBrowser" name="txtbwr_result">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>160</y>
+     <width>801</width>
+     <height>391</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pbtn_doexport">
+   <property name="geometry">
+    <rect>
+     <x>540</x>
+     <y>125</y>
+     <width>111</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="autoFillBackground">
+    <bool>false</bool>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">font: 75 14pt &quot;Agency FB&quot;;</string>
+   </property>
+   <property name="text">
+    <string>结果导出</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_status">
+   <property name="geometry">
+    <rect>
+     <x>290</x>
+     <y>140</y>
+     <width>231</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>8</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
